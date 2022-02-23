@@ -1,17 +1,19 @@
 import Header from './components/Header/Header'
 import Input from "./components/Input/Input";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Main from "./pages/Main/Main";
+import MainLayout from "./layouts/MainLayout";
 
 function App() {
   return (
     <div className="App">
         <BrowserRouter>
-            <Routes>
-                <Route/>
-            </Routes>
+            <MainLayout>
+                <Routes>
+                    <Route path={'/'} element={<Main/>}/>
+                </Routes>
+            </MainLayout>
         </BrowserRouter>
-        <Header/>
-        <Input title={'Title'} placeholder={'placeholder'}/>
     </div>
   );
 }
