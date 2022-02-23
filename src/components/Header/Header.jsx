@@ -1,5 +1,6 @@
 import React from 'react';
 import './Header.scss'
+import Button from "../Button/Button";
 
 const Header = () => {
     return (
@@ -17,9 +18,7 @@ const Header = () => {
                 <button className={'header__login'}>
                     Вход
                 </button>
-                <button className={'header__register'}>
-                    Регистрация
-                </button>
+                <Button width={143} text={'Регистрация'}/>
             </div>
         </div>
     );
