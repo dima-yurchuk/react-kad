@@ -7,11 +7,9 @@ import {Link} from "react-router-dom";
 
 const Login = () => {
     const [isVisiblePassword, setVisiblePassword] = useState(false);
-    function showPassword(){
-        setVisiblePassword(prevState => {
-            return !prevState
-        })
-    }
+    
+    const togglePasswordVisibility = () => setVisiblePassword(!isVisiblePassword);
+    
     return (
         <AuthLayout>
             <div className={'login'}>
@@ -20,11 +18,16 @@ const Login = () => {
                         Вход
                     </div>
                     <div className={'login__fields'}>
-                        <Input type={'text'} title={'Логин'} placeholder={'Введите эл. почту или номер телефона'}
-                               height={68} width={400}/>
+                        <Input 
+                            type={'text'} 
+                            title={'Логин'} 
+                            placeholder={'Введите эл. почту или номер телефона'}
+                            height={68} 
+                            width={400}
+                        />
                         <Input type={isVisiblePassword ? 'text' : 'password'} title={'Пароль'}
                                placeholder={'Введите пароль'} height={68} width={400}/>
-                        <img  onClick={showPassword} className={'login__image'} src={'/images/login/visibility.png'}/>
+                        <img  onClick={togglePasswordVisibility} className={'login__image'} src={'/images/login/visibility.png'}/>
                     </div>
                     <Link to={'/menu'}>
                         <div className={'login__button'}>
