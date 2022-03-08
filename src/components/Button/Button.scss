@@ -1,4 +1,4 @@
-.button{
+.buttonBlue{
   height: 40px;
   background: #1343EA;
   border: solid 1px;
@@ -10,4 +10,18 @@
   line-height: 19px;
   text-align: center;
   color: #FFFFFF;
+}
+.button{
+  height: 40px;
+  background: white;
+  border: 1px solid #D6DADE;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: #0A0D27;
 }

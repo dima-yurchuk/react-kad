@@ -21,6 +21,11 @@
     justify-content: space-between;
     width: 140px;
   }
+  &__auth{
+    width: 234px;
+    display: flex;
+    justify-content: space-between;
+  }
   &__login{
     width: 83px;
     height: 40px;

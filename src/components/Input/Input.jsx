@@ -1,9 +1,9 @@
 import React from 'react';
 import './Input.scss'
 
-const Input = ({title, type, placeholder, width, height}) => {
+const Input = ({title, type, placeholder, style}) => {
     return (
-        <div style={{width:width, height:height}} className={'input'} >
+        <div style={style} className={'input'} >
             <div className={'input__title'}>
                 {title}
             </div>

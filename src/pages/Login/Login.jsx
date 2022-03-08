@@ -21,14 +21,14 @@ const Login = () => {
                     </div>
                     <div className={'login__fields'}>
                         <Input type={'text'} title={'Логин'} placeholder={'Введите эл. почту или номер телефона'}
-                               height={68} width={400}/>
+                               style={{height:68, width:400}}/>
                         <Input type={isVisiblePassword ? 'text' : 'password'} title={'Пароль'}
-                               placeholder={'Введите пароль'} height={68} width={400}/>
+                               placeholder={'Введите пароль'} style={{height:68, width:400}}/>
                         <img  onClick={showPassword} className={'login__image'} src={'/images/login/visibility.png'}/>
                     </div>
                     <Link to={'/menu'}>
                         <div className={'login__button'}>
-                            <Button text={'Войти'} width={400}/>
+                            <Button text={'Войти'} style={{width:400}} isBlue={true}/>
                         </div>
                     </Link>
                     <div className={'login__text'}>

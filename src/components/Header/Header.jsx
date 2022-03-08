@@ -35,12 +35,10 @@ const Header = () => {
                 window.location.pathname==='/' && 
                 <div className={'header__auth'}>
                     <Link to={'/login'}>
-                        <Button className={'header__login'} isBlue={true}>
-                            Вход
-                        </Button>
+                        <Button className={'header__login'} text={'Вход'} style={{width:83}}  isBlue={true}/>
                     </Link>
                     <Link to={'/register'}>
-                        <Button width={143} text={'Регистрация'}/>
+                        <Button text={'Регистрация'} style={{width:143}}/>
                     </Link>
                 </div>
             }
