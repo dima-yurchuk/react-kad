@@ -3,6 +3,9 @@
   justify-content: space-between;
   align-items: center;
   height: 56px;
+  padding-left: 24px;
+  padding-right: 16px;
+  background: white;
   &__logo{
     font-family: Open Sans;
     font-style: normal;
@@ -12,15 +15,11 @@
     color: #1343EA;
     border: 1px solid #FFFFFF;
     text-shadow: white 3px 3px, black 3.5px 3px, black 2.5px 3px, black 3px 3.5px, black 3px 2.5px;
-    margin-left: 25px;
   }
   &__link{
     display: flex;
     justify-content: space-between;
     width: 140px;
-  }
-  &__auth{
-    margin-right: 16px;
   }
   &__login{
     width: 83px;

@@ -1,9 +1,9 @@
 .input{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  //justify-content: space-between;
   width: 400px;
-  height: 68px;
+  //height: 68px;
   &__title{
     font-family: Open Sans;
     font-style: normal;
@@ -11,9 +11,10 @@
     font-size: 13px;
     line-height: 18px;
     color: #0A0D27;
+    margin-bottom: 8px;
   }
   &__field{
-    width: 400px;
+    padding-left: 12px;
     height: 42px;
     border: 1px solid #D6DADE;
     border-radius: 4px;
