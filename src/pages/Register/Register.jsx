@@ -86,7 +86,7 @@ const Register = (props) => {
                                    placeholder={'Введите фамилию'}
                                    style={{marginTop:0, width:192}}/>
                         </div>
-                        {errors.nickname && <div className={'register__error'}>{Object.keys(errors).length}</div>}
+                        {errors.nickname && <div className={'register__error'}>{errors.nickname}</div>}
                         <Input onChange={(e)=>{setPhoneNumber(e.target.value)}}
                                title={'Телефон'}
                                placeholder={'Введите номер телефона'}
