@@ -1,14 +1,15 @@
-import React, {useEffect, useState} from 'react';
-import './Register.scss'
-import AuthLayout from "../../layouts/AuthLayout";
-import Input from "../../components/Input/Input";
-import {Link, NavLink, useNavigate} from "react-router-dom";
-import connect from "react-redux"
-import {useDispatch, useSelector} from "react-redux";
+// CORE
+import React, {useState} from 'react';
+import {Link, useNavigate} from "react-router-dom";
+import {useDispatch} from "react-redux";
 import uniqid from 'uniqid';
 import {createUser} from "../../redux/action";
 import {validateUsername, validateEmail, validatePhoneNumber} from "../../utils/validators";
-import {Redirect} from "react-router-dom";
+// COMPONENTS
+import AuthLayout from "../../layouts/AuthLayout";
+import Input from "../../components/Input/Input";
+// STYLES
+import './Register.scss'
 
 const Register = (props) => {
     const dispatch = useDispatch();
@@ -20,27 +21,16 @@ const Register = (props) => {
     const [errors, setErrors] = useState({});
     const [isErrors, setIsErrors] = useState(false);
     const navigate = useNavigate()
-
     const handleSubmit = (e) =>{
         e.preventDefault()
-        // const id = uniqid()
-        setErrors(validate)
-        // console.log(errors)
-        // console.log(Object.keys(errors).length)
-        // if(Object.keys(errors).length === 0){
-        //     dispatch(createUser(id, firstname + ' ' + lastname, email, password, phoneNumber))
-        // }
-    }
-    useEffect(() =>{
-        const id = uniqid()
-        console.log(errors)
-        console.log(Object.keys(errors).length)
-        if(Object.keys(errors).length === 0 && isErrors){
-            dispatch(createUser(id, firstname + ' ' + lastname, email, password, phoneNumber))
-            navigate('/login')
+        if(Object.keys(validate()).length !== 0) {
+            console.log('errors')
+            setErrors(validate)
+            return;
         }
-        setIsErrors(true)
-    }, [errors])
+        dispatch(createUser(uniqid(), firstname + ' ' + lastname, email, password, phoneNumber));
+        navigate('/login')
+    }
 
     const validate = () =>{
         let errors = {}

@@ -1,6 +1,7 @@
 import React from 'react';
 import './Menu.scss'
 import MenuItem from "./MenuItem/MenuItem";
+import {Link} from "react-router-dom";
 
 const MENU_ITEMS1 = [
     {
@@ -59,7 +60,9 @@ const Menu = () => {
         <div className={'menu'}>
             <div className={'menu__userData'}>
                 <div className={'menu__username'}>
-                    Пётр Романов
+                   <Link to={'/login'}>
+                       Пётр Романов
+                   </Link>
                 </div>
                 <img src={'/images/menu/settings_black_24.png'}/>
             </div>
